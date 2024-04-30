@@ -2,6 +2,7 @@
   get_url:
     url: "{{ wazuh_install_script_url }}"
     dest: /tmp/wazuh-install.sh
+    validate_certs: false
 
 - name: Run Wazuh installation script
   shell: sudo bash /tmp/wazuh-install.sh -a -i > /tmp/wazuh-install-output.txt
